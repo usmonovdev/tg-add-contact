@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --asosiy: #fff;
+    --black: #3a3a3a;
+    --blue: #168ADE;
+    --second: #a8a8a8;
+    --hover: #e1e1e1;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--asosiy);
+    overflow: hidden;
+}
+
+body .container {
+    width: 360px;
+    height: 600px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px #0000007c;
+}
+
+.container .top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 20px 20px 0px 20px;
+}
+
+.top p {
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--black);
+}
+
+.top i {
+    font-size: 20px;
+    color: var(--second);
+}
+
+.container .searchBox {
+    display: flex;
+    flex-direction: row; 
+    margin-bottom: 10px;
+    padding: 0px 0px 0px 20px;
+}
+
+.searchBox i {
+    font-size: 20px;
+    color: var(--second);
+    margin-right: 10px;
+    transform: rotateY(180deg);
+}
+
+.searchBox input {
+    border: none;
+    outline: none;
+    /* font-size: 16px; */
+}
+
+.container .contacts {
+    max-height: 450px;
+    margin-top: 5px;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--asosiy);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--second);
+    border-radius: 5px;
+}
+
+.contacts .user {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 20px 10px 20px;
+}
+
+.user:hover {
+    background: var(--hover);
+}
+
+.user img {
+    width: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.userBox .userName {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--black);
+}
+
+.userBox .time {
+    font-size: 14px;
+    color: var(--second);
+    margin-top: 5px;
+    font-weight: 300;
+}
