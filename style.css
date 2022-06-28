@@ -5,12 +5,20 @@
     box-sizing: border-box;
 }
 
-:root {
+[data-theme="light"] {
     --asosiy: #fff;
     --black: #3a3a3a;
     --blue: #168ADE;
     --second: #a8a8a8;
-    --hover: #e1e1e1;
+    --hover: #f1f1f1;
+}
+
+[data-theme="dark"] {
+    --asosiy: #282e33;
+    --black: #ebebeb;
+    --blue: #35a2ef;
+    --second: #646565;
+    --hover: #333b41;
 }
 
 body {
@@ -43,9 +51,14 @@ body .container {
     color: var(--black);
 }
 
+.top input {
+    display: none;
+}
+
 .top i {
     font-size: 20px;
     color: var(--second);
+    cursor: pointer;
 }
 
 .container .searchBox {
@@ -65,13 +78,15 @@ body .container {
 .searchBox input {
     border: none;
     outline: none;
-    /* font-size: 16px; */
+    background: var(--asosiy);
+    color: var(--black);
 }
 
 .container .contacts {
-    max-height: 450px;
+    height: 450px;
     margin-top: 5px;
     overflow-y: scroll;
+    background: var();
 }
 
 ::-webkit-scrollbar {
