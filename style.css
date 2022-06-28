@@ -34,7 +34,8 @@ body .container {
     width: 360px;
     height: 600px;
     border-radius: 8px;
-    box-shadow: 0px 0px 20px #0000007c;
+    box-shadow: 0px 0px 15px #00000047;
+    display: block;
 }
 
 .container .top {
@@ -130,4 +131,155 @@ body .container {
     color: var(--second);
     margin-top: 5px;
     font-weight: 300;
+}
+
+.bottom {
+    height: 60px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.bottom button {
+    padding: 10px;
+    color: var(--blue);
+    border: none;
+    background: none;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.bottom button:hover {
+    background: var(--hover);
+}
+
+body .addBox {
+    width: 360px;
+    height: 315px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px #00000047;
+    display: none;
+    padding: 20px;
+}
+
+.addBox p {
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--black);
+}
+
+.addBox .u-name {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+.u-name i {
+    font-size: 20px;
+    color: var(--second);
+    margin-right: 20px;
+    margin-top: 5px;
+}
+
+.fnInp {
+    width: 270px;
+    padding: 4px 10px 4px 0px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--black);
+    margin-bottom: 20px;
+}
+
+.fnLabel {
+    position: relative;
+    top: -46px;
+    pointer-events: none;
+    transition: 200ms;
+    font-size: 13px;
+    color: var(--second);
+}
+
+.fnInp:focus ~ .fnLabel{
+    top: -66px;
+    font-size: 13px;
+    color: var(--blue);
+}
+
+.fnInp:valid ~ .fnLabel {
+    top: -66px;
+    font-size: 13px;
+}
+
+.line {
+    width: 270px;
+    height: 0.1rem;
+    background: var(--second);
+    position: relative;
+    top: -14px;
+}
+
+.line::before {
+    content: "";
+    width: 270px;
+    height: 0.1rem;
+    position: relative;
+    top: -0.8rem;
+    left: 0;
+    display: inline-block;
+    background: var(--blue);
+    transform-origin: center;
+    transform: scale(0);
+    transition: 300ms;
+}
+
+.fnInp:focus ~ .line::before {
+    transform: scale(1);
+}
+
+.addBox .phoneNum {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.phoneNum i {
+    font-size: 20px;
+    color: var(--second);
+    margin-right: 20px;
+    margin-top: 5px;
+}
+
+.addBox .addBtn {
+    padding: 10px 20px 10px 20px;
+    color: var(--blue);
+    border: none;
+    background: none;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    top: -15px;
+    float: right;
+}
+
+.addBox .addBtn:hover {
+    background: var(--hover);
+}
+
+.scale {
+    animation: scale 200ms both;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(.8);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }

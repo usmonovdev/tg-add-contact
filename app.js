@@ -23,3 +23,13 @@ function changeTheme() {
         document.getElementById("icon").className = "ri-moon-line"
     }
 }
+
+function addContact() {
+    if (this.click) {
+        document.getElementById("cont").style.display = "block";
+        document.getElementById("addBox").style.display = "none";
+    } else {
+        document.getElementById("cont").style.display = "none";
+        document.getElementById("addBox").style.display = "block";
+    }
+}

@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#282e33">
     <title>Contact form</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="shortcut icon" href="./src/favicon.png" type="image/x-icon">
 </head>
-<body id="body">
-    <div class="container">
+<body>
+    <div class="container" id="cont">
         <div class="top">
             <p>Contacts</p>
             <input type="checkbox" id="theme" onchange="changeTheme()">
@@ -23,13 +25,12 @@
             <i class="ri-search-line"></i>
             <input type="text" onkeyup="searchFu()" id="input" placeholder="Search">
         </div>
-        <!-- <hr style="background: var(--second);"> -->
         <div class="contacts">
             <ul>
                 <li class="user">
                     <img src="./src/1.jpg" alt="User Photo">
                     <div class="userBox">
-                        <p class="userName">Usmonov Azizbek</p>
+                        <p class="userName">Azizbek Usmonov</p>
                         <p class="time" style="color: var(--blue);">online</p>
                     </div>
                 </li>
@@ -115,7 +116,38 @@
                 </li>
             </ul>
         </div>
-        <!-- <hr style="background: var(--second);"> -->
+        <div class="bottom">
+            <button id="addCnt" onclick="addContact()">Add Contact</button>
+        </div>
+    </div>
+
+    <div class="addBox scale" id="addBox">
+        <p>New Contact</p>
+        <div class="u-name">
+            <i class="ri-user-3-line"></i>
+            <div>
+                <div>
+                    <input type="text" class="fnInp" id="fName" required>
+                    <div class="line"></div>
+                    <label class="fnLabel">First Name</label>
+                </div>
+                <div>
+                    <input type="text" class="fnInp" id="fName" required>
+                    <div class="line"></div>
+                    <label class="fnLabel">Last Name</label>
+                </div>
+            </div>
+        </div>
+        <div class="phoneNum">
+            <i class="ri-phone-line"></i>
+            <div>
+                <input type="text" class="fnInp" id="fName" value="+998 " required>
+                <div class="line"></div>
+                <label class="fnLabel">First Name</label>
+            </div>
+        </div>
+        <button class="addBtn">Cancel</button>
+        <button class="addBtn">Create</button>
     </div>
 
     <script src="./app.js"></script>
