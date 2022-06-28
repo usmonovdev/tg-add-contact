@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="./src/favicon.png" type="image/x-icon">
 </head>
 <body>
-    <div class="container" id="cont">
+    <div class="container scale" id="cont">
         <div class="top">
             <p>Contacts</p>
             <input type="checkbox" id="theme" onchange="changeTheme()">
@@ -127,12 +127,12 @@
             <i class="ri-user-3-line"></i>
             <div>
                 <div>
-                    <input type="text" class="fnInp" id="fName" required>
+                    <input type="text" class="fnInp" id="fName" maxlength="14" required>
                     <div class="line" id="red1"></div>
                     <label class="fnLabel" id="red">First Name</label>
                 </div>
                 <div>
-                    <input type="text" class="fnInp" id="lName" required>
+                    <input type="text" class="fnInp" id="lName" maxlength="14" required>
                     <div class="line"></div>
                     <label class="fnLabel">Last Name</label>
                 </div>
@@ -141,7 +141,7 @@
         <div class="phoneNum">
             <i class="ri-phone-line"></i>
             <div>
-                <input type="text" class="fnInp" id="inpNum" value="+998 " required>
+                <input type="text" class="fnInp" id="inpNum" value="+998 " maxlength="23" required>
                 <div class="line" id="red2"></div>
                 <label class="fnLabel" id="red3">Phone Number</label>
             </div>

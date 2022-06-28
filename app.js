@@ -46,7 +46,6 @@ function cencel() {
 
 // Add contact
 function contact() {
-    let inpNum = document.getElementById("inpNum")
     let ul = document.getElementById("ul")
 
     let li = document.createElement("li")
@@ -66,6 +65,7 @@ function contact() {
 
     let firstName = document.getElementById("fName").value
     let lastName = document.getElementById("lName").value
+    let inpNum = document.getElementById("inpNum").value
 
     tagPName.appendChild(document.createTextNode(firstName + " " + lastName))
     tagPTime.appendChild(document.createTextNode("last seen recently"))
@@ -75,13 +75,15 @@ function contact() {
 
     li.appendChild(tagImg)
     li.appendChild(tagDiv)
-    if (firstName.length > 0 || inpNum.length > 3) {
+    if (firstName.length > 0 && inpNum.length > 14) {
         ul.appendChild(li)
     } else {
         li.style.display = "none"
     }
 
-    if (firstName.length == 0){
+    console.log(inpNum.length)
+
+    if (firstName.length == 0 && inpNum.length < 14){
         document.getElementById("red2").style.background = "red"
         document.getElementById("red3").style.color = "red"
         document.getElementById("red").style.color = "red";
@@ -89,11 +91,27 @@ function contact() {
         document.getElementById("cont").style.display = "none";
         document.getElementById("addBox").style.display = "block";
     } else {
-        document.getElementById("red2").style.background = "var(--blue)"
-        document.getElementById("red3").style.color = "var(--blue)"
-        document.getElementById("inpNum").style.color = "var(--blue)"
-        document.getElementById("red").style.color = "var(--blue)";
+        document.getElementById("red2").style.background = "var(--second))"
+        document.getElementById("red3").style.color = "var(--second)"
+        document.getElementById("inpNum").style.color = "var(--black)"
+        document.getElementById("red").style.color = "var(--second)";
         document.getElementById("cont").style.display = "block";
         document.getElementById("addBox").style.display = "none";
     }
+
+    // if (inpNum.length < 14){
+    //     document.getElementById("red2").style.background = "red"
+    //     document.getElementById("red3").style.color = "red"
+    //     document.getElementById("red").style.color = "red";
+    //     document.getElementById("red1").style.background = "red";
+    //     document.getElementById("cont").style.display = "none";
+    //     document.getElementById("addBox").style.display = "block";
+    // } else {
+    //     document.getElementById("red2").style.background = "var(--second))"
+    //     document.getElementById("red3").style.color = "var(--second)"
+    //     document.getElementById("inpNum").style.color = "var(--black)"
+    //     document.getElementById("red").style.color = "var(--second)";
+    //     document.getElementById("cont").style.display = "block";
+    //     document.getElementById("addBox").style.display = "none";
+    // }
 }
