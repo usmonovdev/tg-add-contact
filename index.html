@@ -26,7 +26,7 @@
             <input type="text" onkeyup="searchFu()" id="input" placeholder="Search">
         </div>
         <div class="contacts">
-            <ul>
+            <ul id="ul">
                 <li class="user">
                     <img src="./src/1.jpg" alt="User Photo">
                     <div class="userBox">
@@ -128,11 +128,11 @@
             <div>
                 <div>
                     <input type="text" class="fnInp" id="fName" required>
-                    <div class="line"></div>
-                    <label class="fnLabel">First Name</label>
+                    <div class="line" id="red1"></div>
+                    <label class="fnLabel" id="red">First Name</label>
                 </div>
                 <div>
-                    <input type="text" class="fnInp" id="fName" required>
+                    <input type="text" class="fnInp" id="lName" required>
                     <div class="line"></div>
                     <label class="fnLabel">Last Name</label>
                 </div>
@@ -141,13 +141,13 @@
         <div class="phoneNum">
             <i class="ri-phone-line"></i>
             <div>
-                <input type="text" class="fnInp" id="fName" value="+998 " required>
-                <div class="line"></div>
-                <label class="fnLabel">First Name</label>
+                <input type="text" class="fnInp" id="inpNum" value="+998 " required>
+                <div class="line" id="red2"></div>
+                <label class="fnLabel" id="red3">Phone Number</label>
             </div>
         </div>
-        <button class="addBtn">Cancel</button>
-        <button class="addBtn">Create</button>
+        <button class="addBtn" onclick="contact()">Create</button>
+        <button class="addBtn" onclick="cencel()">Cancel</button>
     </div>
 
     <script src="./app.js"></script>

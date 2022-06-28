@@ -33,3 +33,67 @@ function addContact() {
         document.getElementById("addBox").style.display = "block";
     }
 }
+
+function cencel() {
+    if (this.click) {
+        document.getElementById("cont").style.display = "none";
+        document.getElementById("addBox").style.display = "block";
+    } else {
+        document.getElementById("cont").style.display = "block";
+        document.getElementById("addBox").style.display = "none";
+    }
+}
+
+// Add contact
+function contact() {
+    let inpNum = document.getElementById("inpNum")
+    let ul = document.getElementById("ul")
+
+    let li = document.createElement("li")
+    li.setAttribute("class", "user")
+
+    let tagImg = document.createElement("img")
+    tagImg.src = "src/1.jpg"
+
+    let tagDiv = document.createElement("div")
+    tagDiv.setAttribute("class", "userBox")
+
+    let tagPName = document.createElement("p")
+    tagPName.setAttribute("class", "userName")
+    
+    let tagPTime = document.createElement("p")
+    tagPTime.setAttribute("class", "time")
+
+    let firstName = document.getElementById("fName").value
+    let lastName = document.getElementById("lName").value
+
+    tagPName.appendChild(document.createTextNode(firstName + " " + lastName))
+    tagPTime.appendChild(document.createTextNode("last seen recently"))
+
+    tagDiv.appendChild(tagPName)
+    tagDiv.appendChild(tagPTime)
+
+    li.appendChild(tagImg)
+    li.appendChild(tagDiv)
+    if (firstName.length > 0 || inpNum.length > 3) {
+        ul.appendChild(li)
+    } else {
+        li.style.display = "none"
+    }
+
+    if (firstName.length == 0){
+        document.getElementById("red2").style.background = "red"
+        document.getElementById("red3").style.color = "red"
+        document.getElementById("red").style.color = "red";
+        document.getElementById("red1").style.background = "red";
+        document.getElementById("cont").style.display = "none";
+        document.getElementById("addBox").style.display = "block";
+    } else {
+        document.getElementById("red2").style.background = "var(--blue)"
+        document.getElementById("red3").style.color = "var(--blue)"
+        document.getElementById("inpNum").style.color = "var(--blue)"
+        document.getElementById("red").style.color = "var(--blue)";
+        document.getElementById("cont").style.display = "block";
+        document.getElementById("addBox").style.display = "none";
+    }
+}
