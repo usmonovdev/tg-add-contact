@@ -91,7 +91,7 @@ function contact() {
 
     console.log(inpNum.length)
 
-    if (firstName.length == 0 && inpNum.length < 12){
+    if (firstName.length == 0){
         document.getElementById("red2").style.background = "red"
         document.getElementById("red3").style.color = "red"
         document.getElementById("red").style.color = "red";
@@ -103,6 +103,14 @@ function contact() {
         document.getElementById("red3").style.color = "var(--second)"
         document.getElementById("inpNum").style.color = "var(--black)"
         document.getElementById("red").style.color = "var(--second)";
+        document.getElementById("cont").style.display = "block";
+        document.getElementById("addBox").style.display = "none";
+    }
+
+    if (inpNum.length < 12) {
+        document.getElementById("cont").style.display = "none";
+        document.getElementById("addBox").style.display = "block";
+    } else {
         document.getElementById("cont").style.display = "block";
         document.getElementById("addBox").style.display = "none";
     }
