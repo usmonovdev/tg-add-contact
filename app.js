@@ -75,7 +75,7 @@ function contact() {
 
     li.appendChild(tagImg)
     li.appendChild(tagDiv)
-    if (firstName.length > 0 && inpNum.length > 14) {
+    if (firstName.length > 0 && inpNum.length > 12) {
         ul.appendChild(li)
     } else {
         li.style.display = "none"
@@ -83,7 +83,7 @@ function contact() {
 
     console.log(inpNum.length)
 
-    if (firstName.length == 0 && inpNum.length < 14){
+    if (firstName.length == 0 && inpNum.length < 12){
         document.getElementById("red2").style.background = "red"
         document.getElementById("red3").style.color = "red"
         document.getElementById("red").style.color = "red";
