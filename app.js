@@ -52,7 +52,7 @@ function contact() {
     li.setAttribute("class", "user")
 
     let tagImg = document.createElement("img")
-    tagImg.src = "src/1.jpg"
+    tagImg.src = "src/1.jpg";
 
     let tagDiv = document.createElement("div")
     tagDiv.setAttribute("class", "userBox")
@@ -98,20 +98,4 @@ function contact() {
         document.getElementById("cont").style.display = "block";
         document.getElementById("addBox").style.display = "none";
     }
-
-    // if (inpNum.length < 14){
-    //     document.getElementById("red2").style.background = "red"
-    //     document.getElementById("red3").style.color = "red"
-    //     document.getElementById("red").style.color = "red";
-    //     document.getElementById("red1").style.background = "red";
-    //     document.getElementById("cont").style.display = "none";
-    //     document.getElementById("addBox").style.display = "block";
-    // } else {
-    //     document.getElementById("red2").style.background = "var(--second))"
-    //     document.getElementById("red3").style.color = "var(--second)"
-    //     document.getElementById("inpNum").style.color = "var(--black)"
-    //     document.getElementById("red").style.color = "var(--second)";
-    //     document.getElementById("cont").style.display = "block";
-    //     document.getElementById("addBox").style.display = "none";
-    // }
 }
