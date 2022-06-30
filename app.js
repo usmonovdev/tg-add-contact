@@ -52,7 +52,7 @@ function contact() {
     li.setAttribute("class", "user")
 
     let tagImg = document.createElement("img")
-    tagImg.src = "src/1.jpg";
+    // tagImg.src = "src/1.jpg";
 
     let tagDiv = document.createElement("div")
     tagDiv.setAttribute("class", "userBox")
@@ -66,6 +66,14 @@ function contact() {
     let firstName = document.getElementById("fName").value
     let lastName = document.getElementById("lName").value
     let inpNum = document.getElementById("inpNum").value
+
+    if (firstName.slice(-1) == "a") {
+        tagImg.src = "src/a.jpg"
+    } else if(firstName.slice(-1) == "v"){
+        tagImg.src = "src/v.jpg"
+    } else {
+        tagImg.src = "src/1.jpg"
+    }
 
     tagPName.appendChild(document.createTextNode(firstName + " " + lastName))
     tagPTime.appendChild(document.createTextNode("last seen recently"))
